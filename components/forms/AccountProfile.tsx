@@ -147,6 +147,7 @@ export default function AccountProfile({ user, btnTitle }: Props) {
 									}
 								/>
 							</FormControl>
+							<FormMessage />
 						</FormItem>
 					)}
 				/>
@@ -165,6 +166,7 @@ export default function AccountProfile({ user, btnTitle }: Props) {
 									{...field}
 								/>
 							</FormControl>
+							<FormMessage />
 						</FormItem>
 					)}
 				/>
@@ -183,6 +185,7 @@ export default function AccountProfile({ user, btnTitle }: Props) {
 									{...field}
 								/>
 							</FormControl>
+							<FormMessage />
 						</FormItem>
 					)}
 				/>
@@ -201,6 +204,7 @@ export default function AccountProfile({ user, btnTitle }: Props) {
 									{...field}
 								/>
 							</FormControl>
+							<FormMessage />
 						</FormItem>
 					)}
 				/>
