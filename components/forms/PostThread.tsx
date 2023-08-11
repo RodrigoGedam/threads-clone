@@ -10,6 +10,7 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
+import { createThread } from "@/lib/actions/thread.actions";
 import { updateUser } from "@/lib/actions/user.actions";
 import { ThreadValidation } from "@/lib/validations/thread";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -42,8 +43,15 @@ export default function PostThread({ userId }: { userId: string }) {
 		},
 	});
 
-	const onSubmit = async () => {
-		//await createThread();
+	const onSubmit = async (values: z.infer<typeof ThreadValidation>) => {
+		await createThread({
+			text: values.thread,
+			author: userId,
+			communityId: null,
+			path: pathname,
+		});
+
+		router.push("/");
 	};
 
 	return (
