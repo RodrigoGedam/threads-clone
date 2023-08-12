@@ -50,7 +50,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 						community={childItem.community}
 						createdAt={childItem.createdAt}
 						comments={childItem.children}
-						isComment={true}
+						isComment
 					/>
 				))}
 			</div>
